@@ -1,9 +1,12 @@
 const router = require("express").Router();
-const path = require('path');
-const filePath = pat.join(__dirname, '..', 'public', 'index.html');
-//add our routes
-router.get('/', (req, res) => {});
-res.sendFile('filePath');
+const path = require("path");
 
-//html route for displaying the homepage
-module.export = router;
+// add our routes
+
+// HTML route for displaying the homepage
+router.get("/", (req, res) => {
+    const filePath = path.join(__dirname, "..", "public", "html", "index.html");
+    res.sendFile(filePath);
+});
+
+module.exports = router;
